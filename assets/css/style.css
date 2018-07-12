@@ -1,0 +1,140 @@
+*{
+border: 1px black solid;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  
+}
+.grid-container {
+  display: grid;
+  height: 100%;
+  background-image:url('../images/StarWarsMain.png');
+  background-size: cover;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide DarkSide DarkSide DarkSide DarkSide DarkSide DarkSide" "RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide DarkSide DarkSide DarkSide DarkSide DarkSide DarkSide" "RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide DarkSide DarkSide DarkSide DarkSide DarkSide DarkSide" "RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide DarkSide DarkSide DarkSide DarkSide DarkSide DarkSide" "RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide DarkSide DarkSide DarkSide DarkSide DarkSide DarkSide" "RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide DarkSide DarkSide DarkSide DarkSide DarkSide DarkSide" "RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide DarkSide DarkSide DarkSide DarkSide DarkSide DarkSide" "RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide RebellionSide DarkSide DarkSide DarkSide DarkSide DarkSide DarkSide";
+}
+
+.Light-Character {
+  grid-area: 3 / 1 / 9 / 4;
+
+}
+
+.Dark-Opponent {
+  grid-area: 1 / 9 / 7 / 12;
+}
+
+.Dark-Character {
+  grid-area: 3 / 10 / 9 / 13;
+}
+
+.Light-Opponent {
+  grid-area: 1 / 2 / 7 / 5;
+}
+
+.Dark-Lineup {
+  grid-area: 7 / 6 / 9 / 12;
+}
+
+.Light-Lineup {
+  grid-area: 7 / 2 / 9 / 8;
+}
+
+.DarkOpStat {
+  grid-area: 3 / 8 / 6 / 10;
+}
+
+.LightOpStat {
+  grid-area: 3 / 4 / 6 / 6;
+}
+
+.LightCharStat {
+  grid-area: 6 / 3 / 8 / 6;
+}
+
+.DarkCharStat {
+  grid-area: 6 / 8 / 8 / 11;
+}
+
+.RebellionSide {
+  grid-area: RebellionSide;
+}
+
+.DarkSide {
+  grid-area: DarkSide;
+}
+
+.InstructionsTop{
+    background-color: #ffffffB3;
+    background-size: cover;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    place-content: center;
+    align-self: stretch;
+    grid-area: 2 / 5 / 5 / 9;
+}
+.InstructionsBottom{
+  background-color: #ffffffB3;
+  background-size: cover;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  place-content: center;
+  align-self: stretch;
+  grid-area: 5 / 5 / 8 / 9;
+}
+
+.Instructions{
+  justify-content: center;
+  background-color: #BBBBBB;
+  grid-area: 4 / 5 / 6 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  place-self: center;
+  z-index: 4;
+}
+
+.InstructionsBackgroundTop {
+  background-image: url("../images/Rebellion.jpg");
+  opacity: .5;
+  z-index: 2;
+    /* align-self: center; */
+  background-size: cover;
+  background-position: center;
+    /* object-fit: fill; */
+  grid-area: 2 / 5 / 5 / 9;
+}
+
+.InstructionsBackgroundBottom {
+  background-image: url("../images/Empire.jpg");
+  opacity: .5;
+    z-index: 2;
+    /* align-self: center; */
+    background-size: cover;
+    background-position: center;
+    /* object-fit: fill; */
+  grid-area: 5 / 5 / 8 / 9;
+}
+
+.Light Players {
+  grid-area: 2 / 1 / 8 / 1;
+}
+
+.Dark-Players {
+  grid-area: 2 / 12 / 8 / 12;
+}
+
+
+
