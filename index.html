@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Star Wars RPG</title>
+    <!--CSS-->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!--boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
-    <script src="assets/javascript/game.js"></script>
-    <!--Righteous Font-->
+    <link href="css/hover-min.css" rel="stylesheet">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    <!--Righteous Font-->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <!--Javascript-->
+    <script src="assets/javascript/game.js"></script>
+
 </head>
 <body>
     
@@ -25,14 +27,55 @@
   <div class="Light-Character">
   </div>
   <div class="Dark-Opponent">
+        <div id="Kylo"><img class= "Lineup" src="assets/images/KyloThumb.jpeg">
+        </div>
+          <div id="Maul"><img class = "Lineup" src="assets/images/MaulThumb.jpg">
+        </div>
+          <div id="Vader"><img class = "Lineup" src="assets/images/VaderThumb.jpg">
+        </div>
+          <div id="Grievous"><img class = "Lineup" src="assets/images/GrievousThumb.jpeg">
+        </div>
+          <div id="Palpatine"><img class = "Lineup" src="assets/images/PalpatineThumb.jpg">
+        </div>
   </div>
   <div class="Dark-Character">
   </div>
   <div class="Light-Opponent">
+        <div id="Rey"><img id="Rey" class = "Light Lineup" src="assets/images/ReyThumb.jpg">
+        </div>
+        <div id="Obi" ><img class = "Light Lineup" src="assets/images/ObiWanThumb.png">
+        </div>
+        <div id="Yoda" ><img class = "Light Lineup" src="assets/images/YodaThumb.jpg">
+        </div>
+        <div id="QuiGon" ><img class = "Light Lineup" src="assets/images/QuiGonThumb.jpeg">
+        </div>
+        <div id="Luke" ><img class = "Light Lineup"src="assets/images/LukeThumb.png">
+        </div>
   </div>
   <div class="Dark-Lineup">
+      <div id="Kylo"><img class= "Dark Lineup" src="assets/images/KyloThumb.jpeg">
+    </div>
+      <div id="Maul"><img class = "Dark Lineup" src="assets/images/MaulThumb.jpg">
+    </div>
+      <div id="Vader"><img class = "Dark Lineup" src="assets/images/VaderThumb.jpg">
+    </div>
+      <div id="Grievous"><img class = "Dark Lineup" src="assets/images/GrievousThumb.jpeg">
+    </div>
+      <div id="Palpatine"><img class = "Dark Lineup" src="assets/images/PalpatineThumb.jpg">
+    </div>
   </div>
   <div class="Light-Lineup">
+      <div id="Rey"><img id="Rey" class = "Light Lineup" src="assets/images/ReyThumb.jpg">
+        </div>
+        <div id="Obi" ><img class = "Light Lineup" src="assets/images/ObiWanThumb.png">
+        </div>
+        <div id="Yoda" ><img class = "Light Lineup" src="assets/images/YodaThumb.jpg">
+        </div>
+        <div id="QuiGon" ><img class = "Light Lineup" src="assets/images/QuiGonThumb.jpeg">
+        </div>
+        <div id="Luke" ><img class = "Light Lineup"src="assets/images/LukeThumb.png">
+        </div>
+
   </div>
   <div class="DarkOpStat">
   </div>
@@ -42,21 +85,20 @@
   </div>
   <div class="DarkCharStat">
   </div>
-  <div class="InstructionsTop"></div>
-  <div class="InstructionsBackgroundTop"> 
+  <div class="InstructionsTop front"></div>
+  <div class="InstructionsBackgroundTop front"> 
   </div>
-  <div class="InstructionsBottom"></div>
+  <div class="InstructionsBottom front"></div>
 
-  <div class = "InstructionsBackgroundBottom">
+  <div class = "InstructionsBackgroundBottom front">
 </div>
 <div class = "Instructions">
-      <img src="assets/images/ChooseWisely.png"
+      <img id="InstImage" src="assets/images/ChooseWisely.png">
   </div>
   <div class="Light Players">
   </div>
   <div class="Dark-Players">
   </div>
 </div>
-
 </body>
 </html>

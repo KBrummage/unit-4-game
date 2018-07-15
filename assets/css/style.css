@@ -1,15 +1,20 @@
-*{
+/* *{
 border: 1px black solid;
+} */
+html{
+  height: 100vh;
+  width: 100vw;
 }
-
 body{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 img{
   height: 100%;
   width: 100%;
   background-size: cover;
+  object-fit: cover;
+
   
 }
 .grid-container {
@@ -28,23 +33,46 @@ img{
 }
 
 .Dark-Opponent {
+  visibility: hidden;
   grid-area: 1 / 9 / 7 / 12;
-}
+  display: grid;
+    /* grid-area: Dark-Opponent; */
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "." "." "." "." "."; */
+  }
+
 
 .Dark-Character {
   grid-area: 3 / 10 / 9 / 13;
+  object-fit: cover;
+
 }
 
 .Light-Opponent {
+  visibility: hidden;
+  display: grid;
   grid-area: 1 / 2 / 7 / 5;
 }
 
-.Dark-Lineup {
-  grid-area: 7 / 6 / 9 / 12;
+.Light-Lineup {
+  visibility: hidden;
+  display: grid;
+  grid-area: Lineup;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-area: 7 / 2 / 9 / 12;
+  grid-template-areas: ". . . . .";
 }
 
-.Light-Lineup {
-  grid-area: 7 / 2 / 9 / 8;
+.Dark-Lineup {
+  visibility: hidden;
+  display: grid;
+  grid-area: Lineup;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-area: 7 / 2 / 9 / 12;
+  grid-template-areas: ". . . . .";
 }
 
 .DarkOpStat {
@@ -104,6 +132,7 @@ img{
   align-items: center;
   place-self: center;
   z-index: 4;
+  border: gold solid 5px;
 }
 
 .InstructionsBackgroundTop {
@@ -128,8 +157,12 @@ img{
   grid-area: 5 / 5 / 8 / 9;
 }
 
-.Light Players {
-  grid-area: 2 / 1 / 8 / 1;
+.LightLineup {
+  border: greenyellow solid 5px;
+}
+
+.DarkLineup{
+  border: red solid 5px;
 }
 
 .Dark-Players {
