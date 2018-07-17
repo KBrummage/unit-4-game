@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var identification;
     var char = 0;
- 
+    var enemy;
 
     //scroll over Rebellion
     $(".InstructionsTop").hover(function(){ 
@@ -33,7 +33,6 @@ $(document).ready(function(){
     $(".Instructions").show();
     })
     //if you chose the light path
-
     $(".InstructionsTop").click(function(){
         $(".front").remove();
         $(".Light-Lineup").css({"visibility": "visible"});
@@ -57,30 +56,47 @@ $(document).ready(function(){
         }
     )
     //when you click on a character
-    $(".Lineup").click(function(){
+    
+        
+        $(".Lineup").click(function(){
         if (char < 1){
             char++;
-        identification = $(this).attr("id");
-        var side = $(this).attr("class")
+            identification = $(this).attr("id");
+            console.log(identification);
+            var side = $(this).attr("class")
+            console.log(side);
+            
+            $(".Dark Lineup").css({"visibility": "hidden"})
+            $(".Light Lineup").css({"visibility": "hidden"})
         
-        $(".Dark-Lineup").hide();
-        $(".Light-Lineup").hide();
-       
-        if (side == "Light Lineup"){
-            $(".Light-Character").html(this);
-        $(".Dark-Opponent").css({"visibility": "visible"})
-        } else {
-            $(".Dark-Character").html(this);
-            $(".Light-Opponent").css({"visibility": "visible"});
+            if (side == "Light Lineup"){
+                $(".Light-Character").html(this);
+                $(".Dark2ndLineup").css({"visibility": "visible"})
+                $(".Light-Lineup").css({"visibility": "hidden"})
+            } else {
+                $(".Dark-Character").html(this);
+                $(".Light2ndLineup").css({"visibility": "visible"});
+                $(".Dark-Lineup").css({"visibility": "hidden"})
         }}
 
         else{
-            $(".Dark-Character").html(this);
-            $(".Light-Opponent").css({"visibility": "hidden"});
-            $(".Dark-Opponent").css({"visibility": "hidden"})
-        }
-
-        
+            var side = $(this).attr("class");
+            console.log(side);
+            if(side == "Dark2ndLineup Lineup"){              
+              $(".Dark-Character").html(this); 
+              enemy = $(this).attr('id');
+              console.log(enemy);
+              console.log(this);
+                }
+            else{
+                $(".Light-Character").html(this);
+                enemy = $(this).attr("id");
+                console.log(enemy);
+            }
+             $(".scoreboard").css({"visibility": "visible"});
+             $(".you").html("<p><b> " + identification + ":</b></p>");
+             $(".opp").html("<p><b> " + enemy + ":</b></p>");
+            }
         })
 
     

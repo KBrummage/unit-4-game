@@ -13,10 +13,24 @@ img{
   height: 100%;
   width: 100%;
   background-size: cover;
-  object-fit: cover;
-
-  
+  object-fit: cover;  
 }
+
+.Lineup{
+  height: 200px;
+  width: 200px;
+}
+
+.Dark2ndLineup{
+  height: 200px;
+    width: 200px;
+}
+
+.Light2ndLineup{
+  height: 200px;
+  width: 200px;
+}
+
 .grid-container {
   display: grid;
   height: 100%;
@@ -33,13 +47,13 @@ img{
 }
 
 .Dark-Opponent {
-  visibility: hidden;
-  grid-area: 1 / 9 / 7 / 12;
-  display: grid;
-    /* grid-area: Dark-Opponent; */
-    /* grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "." "." "." "." "."; */
+    visibility: hidden;
+    display: grid;
+    grid-area: Lineup;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-area: 7 / 2 / 9 / 11;
+    grid-template-areas: ". . . . .";  
   }
 
 
@@ -51,8 +65,12 @@ img{
 
 .Light-Opponent {
   visibility: hidden;
-  display: grid;
-  grid-area: 1 / 2 / 7 / 5;
+    display: grid;
+    grid-area: Lineup;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-area: 7 / 2 / 9 / 11;
+    grid-template-areas: ". . . . .";
 }
 
 .Light-Lineup {
@@ -61,7 +79,7 @@ img{
   grid-area: Lineup;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-area: 7 / 2 / 9 / 12;
+  grid-area: 7 / 2 / 9 / 11;
   grid-template-areas: ". . . . .";
 }
 
@@ -73,6 +91,19 @@ img{
   grid-template-rows: 1fr;
   grid-area: 7 / 2 / 9 / 12;
   grid-template-areas: ". . . . .";
+}
+
+.scoreboard{
+  background-color: #ffffffB3;
+    background-size: cover;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    place-content: center;
+    align-self: stretch;
+    grid-area: 2 / 5 / 5 / 9;
+    visibility: hidden;
 }
 
 .DarkOpStat {
