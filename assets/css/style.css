@@ -99,10 +99,10 @@ img{
     z-index: 3;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     place-content: center;
     align-self: stretch;
-    grid-area: 2 / 5 / 5 / 9;
+    grid-area: 1 / 4 / 7 / 9;
     visibility: hidden;
 }
 
